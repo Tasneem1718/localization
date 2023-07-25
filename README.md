@@ -30,7 +30,7 @@
 > and in @ngmodule write down this in **imports**
 
 
-    <pre>
+ 
     HttpClientModule, 
         TranslateModule.forRoot({ 
           defaultLanguage: 'en',
@@ -48,8 +48,6 @@
 
 > Update **translation.service.ts** with the following content:
 
-    
-    <pre>
     import { Injectable } from '@angular/core';
     
     import { TranslateService } from '@ngx-translate/core';
@@ -66,7 +64,7 @@
     } 
 
 ###  Implement language switching in **app.component.ts**
-    <pre>
+  
     import { TranslationService } from './translation.service';
     export class AppComponent {
       constructor(private translationService: TranslationService) {}
@@ -78,32 +76,31 @@
 
 
 ### all good till now, just little more steps
-
 > you need to make 2 json files for translation one is en.json other is your desired langauge file like fr.json in our case would be ar.json
 
 > what to write in ? we creates objects , all keys and values would be strings :
 
 
-<pre>
-{
-  "testTrans": {
-    "TITLE": "مرحبًا!",
-    "MESSAGE": "أهلاً بك في تطبيقنا."
-  }
-} 
+
+    {
+      "testTrans": {
+        "TITLE": "مرحبًا!",
+        "MESSAGE": "أهلاً بك في تطبيقنا."
+      }
+    } 
 
 
 > testTrans is an optional name to indicate what you want to do 
 
 > for english we make another file named en.json
 
-<pre>
-{
-  "testTrans": {
-    "TITLE": "Hello!",
-    "MESSAGE": "Welcome to our application."
-  }
-}
+    
+    {
+      "testTrans": {
+        "TITLE": "Hello!",
+        "MESSAGE": "Welcome to our application."
+      }
+    }
 
 
 ### where this files would be ?
@@ -112,8 +109,6 @@
 
 ### last thing last we go to html component
 > which to be translated and type this code below
-
-
 
     <div>
       <h2>{{ 'testTrans.title' | translate }}</h2>
