@@ -4,11 +4,11 @@
 
 > you need to install required dependencies
 
-` npm install @ngx-translate/core @ngx-translate/http-loader --save `
+` >> npm install @ngx-translate/core @ngx-translate/http-loader --save `
 
 > **npm didn't work out for me if you had any troubles use yarn instead**
 
-`yarn add  @ngx-translate/core @ngx-translate/http-loader --save`
+` >> yarn add  @ngx-translate/core @ngx-translate/http-loader --save`
 
 ### then you need to import this configuraions in **app.module.ts**
     
@@ -44,7 +44,7 @@
 
 
 ### this far you need to setup a service called translation.service.ts
-`ng g service translation`
+` >> ng g service translation`
 
 > Update **translation.service.ts** with the following content:
 
